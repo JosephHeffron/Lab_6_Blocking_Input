@@ -1,9 +1,9 @@
 import java.util.Scanner;
-
+// Import scanner and create class
 public class RectangleInfo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        // Declare variables
         double width;
         double height;
 
@@ -11,13 +11,15 @@ public class RectangleInfo {
         do {
             System.out.print("Enter the width of the rectangle: ");
             width = scanner.nextDouble();
-        } while (width <= 0); // Ensure the input is positive
+        } while (width <= 0); 
+        // Ensure the input is positive
 
         // Input the height of the rectangle
         do {
             System.out.print("Enter the height of the rectangle: ");
             height = scanner.nextDouble();
-        } while (height <= 0); // Ensure the input is positive
+        } while (height <= 0); 
+        // Ensure the input is positive
 
         // Calculate area and perimeter of the rectangle
         double area = width * height;
