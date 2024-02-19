@@ -1,27 +1,32 @@
 import java.util.Random;
 import java.util.Scanner;
-
+// Import random and scanner
+// Create class
 public class HighorLow {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        int randomNumber = random.nextInt(10) + 1; // Generate random number between 1 and 10
+        int randomNumber = random.nextInt(10) + 1; 
+        // Generate random number between 1 and 10
 
         int userGuess;
 
         // Guess the number
+        // Do while loop
         do {
             System.out.print("Guess the number (between 1 and 10): ");
             while (!scanner.hasNextInt()) {
                 System.out.println("Error: Please enter a valid number.");
-                scanner.next(); // consume the invalid input
+                scanner.next(); 
+                // Invalid input
             }
             userGuess = scanner.nextInt();
             if (userGuess < 1 || userGuess > 10) {
                 System.out.println("Error: Please enter a number between 1 and 10.");
             }
-        } while (userGuess < 1 || userGuess > 10); // Ensure the input is between 1 and 10
+        } while (userGuess < 1 || userGuess > 10); 
+        // Ensure the input is between 1 and 10
 
         // Display the random number
         System.out.println("The random number was: " + randomNumber);
